@@ -1,0 +1,20 @@
+[project]
+name = "bob-diagnostics"
+version = "0.1.0"
+description = "Live diagnostics and PID tuning dashboard for BOB the balancing robot"
+authors = [
+    {name = "Ethan Hofton", email = "ethanhofton@gmail.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "imgui-bundle (>=1.92.801,<2.0.0)",
+    "numpy (>=2.4.6,<3.0.0)",
+    "websocket-client (>=1.8.0,<2.0.0)",
+]
+
+[tool.poetry.scripts]
+bob-diagnostics = "bob_diagnostics.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
